@@ -32,7 +32,7 @@ class PandasMode:
         return data_frame[field_name].mode()
 ```
 
-## Polymorphism:
+## Polymorphism
 
 Polymorphism might be applied to allow different statistical measures to be applied to datasets using a common interface. In the following code snippet, polymorphism is expressed because each method is called on a different class, yet they all conform to the same interface for statistical analysis. This polymorphic behavior allows for a flexible and extensible design, where additional statistical measures can be added in the future without modifying the main code as long as they adhere to the shared interface. 
 
@@ -46,7 +46,7 @@ pop_variance = PandasVariance.get_variance_of_database(initial_data_frame, 'pop'
 pop_std = RoundingToAppConfig.round_values(PandasStd.get_std_of_database(initial_data_frame, "pop"))
 ```
 
-# Abstraction:
+# Abstraction
 
 Abstraction involves simplifying complex systems by modeling classes based on their essential properties. To illustrate, the following code demonstrates abstraction by encapsulating the functionality of calculating the mode of a database within the `PandasMode` class. 
 
@@ -63,7 +63,7 @@ class PandasMode:
 
 This program demonstrated a variety of programming skills such as statistical analysis, algorithm design, file handling,  randomization, testing, and overall showcased an emphasis on clear and readable code.
 
-## Statistical Analysis:
+## Statistical Analysis
 
 The program demonstrates a solid understanding of statistical concepts by applying measures like min, max, median, mode, mean, and standard deviation to analyze datasets. The following is an example of the mode being found through the `PandasMode` class. 
 
@@ -76,7 +76,7 @@ class PandasMode:
         return data_frame[field_name].mode()
 ```
 
-## Algorithm Design:
+## Algorithm Design
 
 The algorithmic aspect of calculating sample size from a large dataset indicates proficiency in designing algorithms to solve specific problems.
 
@@ -90,7 +90,7 @@ class SampleSize:
                       / (1 + (z_score_squared * pop_std * pop_std) / (margin_of_error_squared * population))), 2)
 ```
 
-## File Handling:
+## File Handling
 
 The program showcases skills in file handling, as it saves the resulting sample datasets to disk for future use.
 
@@ -100,7 +100,7 @@ The program showcases skills in file handling, as it saves the resulting sample 
     df_1_final.to_csv(os.path.join(sample_files_output_dir, r'sample_data_number_2.58_0.05_48.csv'))
 ```
 
-## Randomization:
+## Randomization
 
 The random selection of records for sample data creation reflects programming skills related to randomization, ensuring that each record is unique. The following example uses `sample(n=sample_size)` to randomize the samples taken by the number of samples.
 
@@ -108,7 +108,7 @@ The random selection of records for sample data creation reflects programming sk
 df_1 = initial_data_frame.sample(n=int(sample_size), replace=False, axis=None)
 ```
 
-## Testing Strategy Implementation:
+## Testing Strategy Implementation
 
 Incorporating a detailed testing strategy is important to ensuring the reliability and success of any program. A number of test cases were designed to evaluate the functionality of critical components, ranging from statistical measures to the calculation of sample sizes. By employing testing methodologies such as unit testing, the program systematically validates individual units of code, ensuring that each class and function performs as intended. Below is one example of a function created to test that `PandasMax` is running successfully.
 
@@ -123,17 +123,17 @@ def test_pandas_max():
     assert PandasMax.database_max(data_frame, 'a') == 10
 ```
 
-## Code Organization and Readability:
+## Code Organization and Readability
 
 The organization of the program into sections such as calculations, data, tests, shows an emphasis on code readability and modular design.
 
 # Program Overview
 
-## Sample Size Calculation:
+## Sample Size Calculation
 
 Sample size is crucial to ensuring that the selected subset is a fair representative of the entire population. The program employs a formula to calculate the correct sample size from the large dataset.
 
-## Sample Data Creation:
+## Sample Data Creation
 
 The program selects representative records for min and max values, with the remaining records  randomly chosen from the population dataset. This allows each record to be unique.
 We create 15 test data files, each with different confidence intervals and margins of error.
@@ -143,14 +143,14 @@ We create 15 test data files, each with different confidence intervals and margi
 The generated sample datasets can be used at various stages of development to test different aspects of the program, such as memory usage.
 As the program progresses, developers can increase the size of the input data for more comprehensive testing.
 
-## File Saving:
+## File Saving
 
 The resulting sample datasets are saved to disk for future use in development.
 
-## Repeatability:
+## Repeatability
 
 The program ensures that each record in the sample dataset is unique, avoiding repetitions.
 
-## Confidence Interval and Margin of Error:
+## Confidence Interval and Margin of Error
 
 The program generates 15 test data files using specified values for confidence interval and margin of error, allowing for a diverse set of test scenarios.
