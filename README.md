@@ -46,7 +46,7 @@ pop_variance = PandasVariance.get_variance_of_database(initial_data_frame, 'pop'
 pop_std = RoundingToAppConfig.round_values(PandasStd.get_std_of_database(initial_data_frame, "pop"))
 ```
 
-# Abstraction
+## Abstraction
 
 Abstraction involves simplifying complex systems by modeling classes based on their essential properties. To illustrate, the following code demonstrates abstraction by encapsulating the functionality of calculating the mode of a database within the `PandasMode` class. 
 
