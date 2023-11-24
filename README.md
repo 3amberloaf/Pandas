@@ -129,6 +129,8 @@ The organization of the program into sections such as calculations, data, tests,
 
 # Program Overview
 
+The program is composed of three main components; calculation classes, test functions, and the data. The following is a list of the topics covered and a general explaination.
+
 ## Sample Size Calculation
 
 Sample size is crucial to ensuring that the selected subset is a fair representative of the entire population. The program employs a formula to calculate the correct sample size from the large dataset.
@@ -138,7 +140,7 @@ Sample size is crucial to ensuring that the selected subset is a fair representa
 The program selects representative records for min and max values, with the remaining records  randomly chosen from the population dataset. This allows each record to be unique.
 We create 15 test data files, each with different confidence intervals and margins of error.
 
-## Testing Strategy:
+## Testing Strategy
 
 The generated sample datasets can be used at various stages of development to test different aspects of the program, such as memory usage.
 As the program progresses, developers can increase the size of the input data for more comprehensive testing.
