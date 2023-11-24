@@ -11,7 +11,9 @@ from app.file_ops import FileOperations
 def main():
     """This is the main function that is run"""
 
+
 if __name__ == '__main__':
+    """This causes the hello world function to be called if this is the __main__ top level of code"""
     main()
     # all for initial state_population
     absolute_path = str(FileOperations.get_calculate_file_path(Config.data_directory, Config.data_file_name))
